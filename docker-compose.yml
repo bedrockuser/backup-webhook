@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  backup-webhook:
+    image: ghcr.io/bedrockuser/backup-webhook:latest
+    environment:
+      - WEBHOOK_URL=YOUR_DISCORD_WEBHOOK_URL
+      - MONITOR_FOLDER=/app/folder
+      - SEND_HOUR=01:00  # Time to send the backup (24-hour format)
+      - WEBHOOK_USERNAME=Backup Bot
+      - WEBHOOK_AVATAR_URL=https://example.com/avatar.png
+    volumes:
+      - /path/to/local/folder:/app/folder
+    restart: unless-stopped
