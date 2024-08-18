@@ -10,5 +10,5 @@ services:
       - WEBHOOK_USERNAME=Backup Bot
       - WEBHOOK_AVATAR_URL=https://example.com/avatar.png
     volumes:
-      - /path/to/local/folder:/app/folder
+      - /path/to/local/folder:/app/folder:ro
     restart: unless-stopped
