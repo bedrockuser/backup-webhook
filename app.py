@@ -50,7 +50,7 @@ def send_zip_to_webhook():
     if os.path.exists(TEMP_ZIP_PATH):
         os.remove(TEMP_ZIP_PATH)
 
-    if response.status_code == 204:
+    if response.status_code == 200:
         print("Success: Backup sent to webhook.")
     else:
         print(f"Error: Failed to send backup. Status code: {response.status_code}")
