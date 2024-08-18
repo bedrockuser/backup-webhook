@@ -1,10 +1,5 @@
-import os
-import time
-import requests
-import zipfile
-import shutil
+import os, time, requests, zipfile, shutil, schedule, json
 from pathlib import Path
-import schedule
 from datetime import datetime
 
 # Environment variables for configuration
