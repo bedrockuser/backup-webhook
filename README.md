@@ -28,7 +28,6 @@ version: '3.8'
 services:
   backup-webhooks:
     image: ghcr.io/bedrockuser/backup-webhook:latest
-    build: .
     environment:
       - WEBHOOK_URL=YOUR_DISCORD_WEBHOOK_URL
       - MONITOR_FOLDER=/app/folder
@@ -36,5 +35,5 @@ services:
       - WEBHOOK_USERNAME=Backup Bot
       - WEBHOOK_AVATAR_URL=https://example.com/avatar.png
     volumes:
-      - /path/to/local/folder:/app/folder
+      - /path/to/local/folder:/app/folder:ro
     restart: unless-stopped
